@@ -1,0 +1,315 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 19, 20);
+}
+
+/* Navigasjon */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: black;
+    transition: 0.4s;
+}
+
+.nav:hover{
+    height: 70px;
+}
+
+#logo{
+    text-decoration: none;
+    color: rgb(145, 215, 255);
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.nav li{
+    margin-right: 20px;
+    font-family: "Lucida Sans Unicode";
+}
+
+.nav li a{
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.nav li a:hover{
+    color: rgb(145, 215, 255);
+}
+
+#icon{
+    height: 22px;
+    width: auto;
+}
+
+/* Header */
+.header{
+    width: auto;
+    height: 600px;
+    position: relative;
+    margin-right: 60px;
+    margin-left: 60px;
+    border: 1px solid rgb(145, 215, 255);
+}
+
+.header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay a:hover{
+    color: rgb(145, 215, 255);
+}
+
+.icon{
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.icon:hover{
+    transition: ease 0.5s;
+}
+
+/* Main */
+.main{
+    color: white;
+    margin: 20px;
+    margin-top: 0;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "moreInfo moreInfo moreInfo"
+        "info info image";
+}
+
+.title{
+    font-size: 30px;
+    font-family: "Lucida Sans Unicode";
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+/* Stjernescore */
+.star{
+    margin-bottom: 50px;
+    margin-left: 40px;
+}
+
+.star p{
+    margin-top: 0;
+    opacity: 50%;
+}
+
+.checked {
+    color: orange;
+}
+
+/* Filminfo */
+.boxes p{
+    font-family: "Arial";
+}
+
+#box1{
+    grid-area: info;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#box2{
+    grid-area: image;
+}
+
+#box2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#box3{
+    grid-area: moreInfo;
+    padding-bottom: 30px;
+}
+
+hr{
+    margin-top: 40px;
+    height: 3px;
+    border: 0;
+    background-color: rgb(28, 30, 30);
+}
+
+/* Kommentarer og tilbakemeldinger */
+#review{
+    font-size: 30px;
+    font-family: "Palatino Linotype";
+}
+
+.comment-section{
+    margin-right: 40px;
+}
+
+.user-comment{
+    display: flex;
+}
+
+.user-comment a{
+    color: white;
+    font-size: 20px;
+}
+
+.info{
+    border: 2px solid rgb(38, 40, 40);
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    background-color: rgb(28, 30, 30);
+}
+
+/*.info img{
+    height: 50px;
+}*/
+
+.info p{
+    font-family: "Droid Sans";
+    font-size: 18px;
+}
+
+.comment{
+    margin-top: 40px;
+    font-family: "Arial";
+}
+
+.comment button{
+    cursor: pointer;
+    padding: 5px;
+    font-family: "Arial";
+    background-color: grey;
+    color: black;
+    border: 0;
+    
+}
+
+.comment textarea, input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer{
+    background-color: black;
+    margin: 0;
+    height: 100px;
+    /*display: block;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Arial";
+}
+
+.footer p{
+    margin: 0;
+}
+
+.footer ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li{
+    margin-right: 20px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer div a{
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.footer a:hover{
+    color: rgb(145, 215, 255);
+}
+
+.footer p{
+    color: white;
+    margin-left: 20px;
+    opacity: 50%;
+}
+
+/* Tilpasninger til skjermstørrelser */
+@media(max-width: 800px){
+    .main-grid{
+        grid-template-areas: 
+        "moreInfo moreInfo moreInfo"
+        "image image image"
+        "info info info";
+    }
+    .header{
+        height: 400px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .title, .star{
+        margin-left: 0px;
+    }
+    #box1{
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        flex-direction: column;
+        padding: 30px;
+}
+
+@media(max-width: 568px){
+    .footer{
+        flex-direction: column;
+        padding: 30px;
+}

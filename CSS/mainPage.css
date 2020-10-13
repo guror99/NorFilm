@@ -1,0 +1,241 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 19, 20);
+}
+
+/* Navigasjon */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: black;
+    transition: 0.4s;
+}
+
+.nav:hover{
+    height: 70px;
+}
+
+#logo{
+    text-decoration: none;
+    color: rgb(145, 215, 255);
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.nav li{
+    margin-right: 20px;
+    font-family: "Lucida Sans Unicode";
+}
+
+.nav li a{
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.nav li a:hover{
+    color: rgb(145, 215, 255);
+}
+
+#icon{
+    height: 22px;
+    width: auto;
+}
+
+/* Header */
+.header{
+    width: 100%;
+    position: relative;
+}
+
+.header div{
+    position: absolute;
+    bottom: 90px;
+    right: 120px;
+    color: white;
+    font-size: 3rem;
+}
+
+.header img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin-top: 50px;
+    object-position: top;
+}
+
+/* Main område */
+.main{
+    margin: 20px;
+    margin-top: 0;
+    color: white;
+    display: grid;
+}
+
+.cat-meny{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 25px;
+    font-family: "Lucida Sans Unicode";
+}
+
+.cat-meny h3{
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 8px 15px 2px 15px;
+}
+
+.cat-meny a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 100%;
+    grid-gap: 15px;
+}
+
+.main-grid img{
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+
+.main p{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.mov h3{
+    margin: 0;
+    font-family: "Palatino Linotype";
+}
+
+.mov:hover{
+    color: rgb(145, 215, 255);
+}
+
+.mov img:hover{
+    border: 1px solid rgb(145, 215, 255);
+    box-shadow: 1px 1px 5px 2px rgb(145, 215, 255);
+}
+
+/* Footer */
+.footer{
+    background-color: black;
+    margin: 0;
+    height: 100px;
+    /*display: block;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Arial";
+}
+
+.footer p{
+    margin: 0;
+}
+
+.footer ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li{
+    margin-right: 20px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer div a{
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.footer a:hover{
+    color: rgb(145, 215, 255);
+}
+
+.footer p{
+    color: white;
+    margin-left: 20px;
+    opacity: 50%;
+}
+
+/* Tilpasninger til skjermstørrelser */
+@media(max-width: 800px){
+    .main-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .main-grid img{
+        height: 200px;
+        width: 100%;
+    }
+    #middle-title{
+        text-align: left;
+    }
+    .header div{
+        bottom: 60px;
+        right: 40px;
+    }
+    .footer{
+        flex-direction: column;
+        padding: 30px;
+}
+
+@media(max-width: 568px){
+    .main-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-grid img{
+        height: 200px;
+        width: 100%;
+    }
+    #middle-title{
+        text-align: left;
+    }
+    .header div{
+        bottom: 30px;
+        right: 20px;
+        font-size: 40px;
+    }
+    .footer{
+        flex-direction: column;
+        padding: 30px;
+}
