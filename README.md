@@ -1,1 +1,1 @@
-Hadde i oppgave å lage en streammingtjeneste som skulle være en konkurrent av Netflix.
+Hadde i oppgave å lage en streamingtjeneste som skulle være en konkurrent av Netflix.
